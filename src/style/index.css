@@ -1,0 +1,40 @@
+/* Estilos para el contenido principal usando CSS Grid */
+main {
+  padding: 20px;
+  display: grid;
+  /* Cambiamos el grid a una sola columna */
+  grid-template-columns: 1fr;
+  /* Espacio entre las secciones */
+  grid-gap: 20px;
+}
+
+/* imagen inicial ocupa todas las columnas */
+main div:nth-child(1) {
+  grid-column: 1 / -1;
+}
+
+/* ultima sección ocupa todas las columnas */
+main section:nth-child(6) {
+  grid-column: 1 / -1;
+}
+
+/* Media Query para pantallas mayores a 800px (tables y pc) */
+@media screen and (min-width: 800px) and (max-width: 1200px) {
+  main {
+    /* Crea dos columnas de igual tamaño */
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Media Query para pantallas mayores a 800px (tables y pc) */
+@media screen and (min-width: 1200px) {
+  main {
+    /* Crea tres columnas de igual tamaño */
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* imagen inicial de las secciones ocupa las tres columnas */
+  main section:nth-child(2) {
+    grid-column: 1 / -1;
+  }
+}

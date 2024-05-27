@@ -1,0 +1,22 @@
+/* Estilos para el contenido principal usando CSS Grid */
+main {
+  padding: 20px;
+  display: grid;
+  /* Crea una columnas de grid */
+  grid-template-columns: repeat(1);
+  /* Espacio entre las secciones */
+  grid-gap: 20px;
+}
+
+/* ultima sección ocupa las dos columnas */
+main section:nth-child(3) {
+  grid-column: 1 / -1;
+}
+
+/* Media Query para pantallas mayores a 800px (tables y pc) */
+@media screen and (min-width: 800px) {
+  main {
+    /* Crea dos columnas de igual tamaño */
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

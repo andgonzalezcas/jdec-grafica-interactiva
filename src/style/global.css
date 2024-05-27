@@ -1,0 +1,195 @@
+/* Reset básico para estilos, asi evitamos que los estilos del navegador molesten en nuestro diseño*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos generales */
+html {
+  font-family: Arial, sans-serif;
+  /* Fondo oscuro para el tablero */
+  background-color: #0A0908;
+  /* Texto claro para contraste */
+  color: #EAE0D5;
+  display: flex;
+  justify-content: center;
+}
+
+/* Estilo enfocado en  */
+body {
+  /* Cambios para mejorar como se ve los textoss */
+  line-height: 1.6;
+  font-size: 18px;
+  width: 100%;
+  /* Se coloca un maximo al width para tener una mejor legibilidad en pantallas grandes */
+  max-width: 1280px;
+  background-color: #22333B;
+  /* Se pone como minimo de pantalla el tamaño completo en vertical de la pantalla */
+  min-height: 100vh;
+}
+
+/* Estilos para el encabezado */
+header {
+  /* Fondo oscuro con tonos más claros para el encabezado */
+  background-color: #22333B;
+  padding: 20px;
+  /* Se alinea el texto al centro */
+  text-align: center;
+  /* Posision relativa a la pantalla */
+  position: fixed;
+  top: 0;
+  /* Ya que es una posicion que esta relativa a la pantalla, debe tambien ajustarse el maximo tamaño horizontal para esta seccion */
+  max-width: 1280px;
+  width: 100%;
+}
+
+header h1 {
+  margin: 0;
+  /* Color dorado para destacar el título */
+  color: #C6AC8F;
+}
+
+/* Estilos para la navegación */
+nav {
+  /* Fondo oscuro con tonos más claros para la barra de navegación */
+  background-color: #5E503F;
+  padding: 15px;
+}
+
+nav ul {
+  /* Se quita el estilo de la lista del navegador */
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+}
+
+nav ul li {
+  /* para poner el display en linea (para mejorar visualmente la lista de navegacion) */
+  display: inline;
+  padding: 0 10px;
+}
+
+/* es una funcionalidad de no permitir que el ultimo item de la lista tenga el borde derecho pintado */
+nav ul li:not(:last-child) {
+  border-right: 1px solid #EAE0D5;
+}
+
+/* etiqueta a dentro de una li, dentro de un ul, dentro de un nav */
+nav ul li a {
+  color: #EAE0D5;
+  /* Se evita el estilo predeterminado del navegador en los enlaces (etiqueta a) */
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  /* Color dorado al pasar el cursor */
+  color: #C6AC8F;
+}
+
+/* Estilos para el contenido principal */
+main {
+  padding: 20px;
+  margin-bottom: 96px;
+  margin-top: 300px;
+}
+
+@media screen and (min-width: 800px) {
+  main {
+    margin-bottom: 50px;
+    margin-top: 157px;
+  }
+}
+
+main h2 {
+  /* Color dorado para los subtítulos */
+  color: #C6AC8F;
+}
+
+/* Aqui se evita el estilo de los navegadores a las listas */
+main ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Aqui tomamos por ejemplo una etiqueta li dentro de un ul dentro de un main y solo modifica lo que cumple esta regla */
+main ul li {
+  margin-bottom: 10px;
+}
+
+/* Agrega un borde punteado a cada sección */
+main section {
+  border: 2px dotted #EAE0D5;
+  border-radius: 14px;
+  padding: 20px;
+}
+
+/* Estilos para el pie de página */
+footer {
+  position: fixed;
+  bottom: 0px;
+  /* Fondo oscuro con tonos más claros para el pie de página */
+  background-color: #22333B;
+  text-align: center;
+  color: #EAE0D5;
+  width: 100%;
+  max-width: 1280px;
+  padding-bottom: 10px;
+}
+
+@media screen and (max-width: 800px) {
+  footer {
+    padding: 0 10px 10px;
+  }
+}
+
+/* Media Query para pantallas menores a 800px (telefonos móviles) */
+@media screen and (max-width: 800px) {
+  img {
+    width: 100%;
+  }
+}
+
+/* Esto es una divicion mas general para alinear cosas al centro de la pantalla en horizontal */
+div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Estilos de clases */
+.add-margin-button-20px {
+  margin-bottom: 20px;
+}
+
+/* Estilo base para todos los enlaces */
+.custom-link {
+  color: #EAE0D5;
+  /* Elimina el subrayado predeterminado */
+  text-decoration: none;
+}
+
+/* Estilo para enlaces no visitados */
+.custom-link:link {
+  color: #EAE0D5;
+}
+
+/* Estilo para enlaces visitados */
+.custom-link:visited {
+  color: #C6AC8F;
+}
+
+/* Estilo para cuando el usuario pasa el mouse sobre un enlace */
+.custom-link:hover {
+  color: #C6AC8F;
+}
+
+/* Estilo para cuando el enlace está enfocado (por ejemplo, mediante tabulación) */
+.custom-link:focus-visible {
+  border-bottom: 2px solid #C6AC8F;
+}
+
+/* Estilo para cuando el enlace está activo (se está haciendo clic) */
+.custom-link:active {
+  color: #C6AC8F;
+}
